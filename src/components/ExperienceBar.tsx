@@ -1,30 +1,16 @@
-interface ExperienceBarProps {
-	maxExperience: number;
-	currentExperience: number;
-	currentLevel: number;
-}
+import styles from '../styles/components/ExperienceBar.module.css';
 
-export function ExperienceBar(props: ExperienceBarProps) {
-	let experienceBarWidth = (
-		(100 / props.maxExperience) *
-		props.currentExperience
-	).toFixed(0);
-
+export function ExperienceBar() {
 	return (
-		<header className='experience-bar'>
+		<header className={styles.experienceBar}>
 			<span>0 xp</span>
-            <span className='current-level'>Level {props.currentLevel}</span>
 			<div>
-				<div style={{ width: `${experienceBarWidth}%` }}> </div>
-				<span
-					className='current-experience'
-					style={{ left: `${experienceBarWidth}%` }}
-					hidden={props.currentExperience <= 0}
-				>
-					{props.currentExperience} xp
+				<div style={{ width: `50%` }}> </div>
+				<span className={styles.currentExperience} style={{ left: `50%` }}>
+					300 xp
 				</span>
 			</div>
-			<span>{props.maxExperience} xp</span>
+			<span>500 xp</span>
 		</header>
 	);
 }
