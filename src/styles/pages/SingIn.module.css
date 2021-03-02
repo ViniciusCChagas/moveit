@@ -1,0 +1,70 @@
+.pageContainer {
+	display: flex;
+	height: 100vh;
+	background: var(--blue);
+}
+
+.pageContainer > img {
+	position: absolute;
+	height: 80%;
+	top: 10%;
+}
+
+.loginContainer {
+	margin: auto 15% auto auto;
+
+	color: var(--white);
+}
+
+.loginContainer img {
+	margin-bottom: 15%;
+}
+
+.loginContainer h1 {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.loginContainer > div {
+	display: flex;
+	width: 70%;
+
+	margin: 5% 0;
+}
+.loginContainer > div svg {
+	font-size: 2.5rem;
+	margin-right: 1rem;
+}
+
+.loginContainer a {
+	display: flex;
+	width: 70%;
+	height: 4rem;
+
+	margin-top: 2rem;
+
+	display: flex;
+	padding: 0.25rem;
+
+	align-items: center;
+	justify-content: center;
+
+	border: 0;
+	border-radius: 5px;
+
+	background: #2b3137;
+	color: #fafbfc;
+
+	font-size: 1.25rem;
+	font-weight: 600;
+	line-height: 1.25;
+	transition: background-color 0.2s;
+}
+.loginContainer a:hover {
+	background: #24292e;
+    cursor: pointer;
+}
+
+.loginContainer a svg {
+	margin-right: 1rem;
+}

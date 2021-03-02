@@ -1,4 +1,8 @@
-.container {
+.pageContainer {
+	display: flex;
+}
+
+.appContainer {
 	height: 100vh;
 	max-width: 992px;
 	margin: 0 auto;
@@ -8,7 +12,7 @@
 	flex-direction: column;
 }
 
-.container section {
+.appContainer section {
 	flex: 1;
 	display: grid;
 	grid-template-columns: 1fr 1fr;

@@ -37,6 +37,10 @@
 	border-left: 1px solid #f0f1f3;
 }
 
+.countdownButtonContainer {
+	position: relative;
+}
+
 .countdownButton {
 	width: 100%;
 	height: 5rem;
@@ -58,6 +62,11 @@
 	transition: background-color 0.2s;
 }
 
+.countdownButton svg {
+	font-size: 1rem;
+	margin-left: 0.5rem;
+}
+
 .countdownButton:not(:disabled):hover {
 	background: var(--blue-dark);
 }
@@ -72,15 +81,33 @@
 	color: var(--white);
 }
 
+.countdownButtonActive:not(:disabled):hover ~ .progressButtonContainer {
+	display: none;
+}
+
 .countdownButton:disabled {
 	background: var(--white);
 	color: var(--text);
 	cursor: not-allowed;
-
-	border-bottom: 3px solid var(--green);
 }
 
-.countdownButton:disabled img {
-	font-size: 0.5rem;
-	margin-left: 0.5rem;
+.countdownButton:disabled svg {
+	color: var(--green);
+}
+
+.progressButtonContainer {
+	height: 5px;
+	background: var(--gray-line);
+	bottom: 0px;
+	border-radius: 0 0 5px 5px;
+	position: absolute;
+	width: 100%;
+}
+
+.progressButtonContainer > div {
+	height: 5px;
+	border-radius: 0 0 0 5px;
+	background: var(--green);
+
+	transition: width 500ms;
 }

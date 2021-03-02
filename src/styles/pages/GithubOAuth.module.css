@@ -1,0 +1,40 @@
+.pageContainer {
+	display: flex;
+	height: 100vh;
+	background: var(--blue);
+}
+
+.pageContainer > img {
+	position: absolute;
+	height: 80%;
+	top: 10%;
+}
+
+.leftContainer {
+    display: flex;
+    flex-direction: column;
+
+	margin: auto 15% auto auto;
+	color: var(--white);
+}
+
+.leftContainer img {
+	margin-bottom: 15%;
+}
+
+.leftContainer h1 {
+	font-size: 2rem;
+	font-weight: 600;
+}
+
+.leftContainer > div {
+	display: flex;
+	width: 70%;
+
+	margin: 5% 0;
+}
+
+.leftContainer svg {
+    margin: 2rem auto;
+    font-size: 2rem;
+}

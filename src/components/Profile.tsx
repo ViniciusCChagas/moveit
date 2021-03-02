@@ -7,15 +7,12 @@ export function Profile() {
 
 	return (
 		<div className={styles.profileContainer}>
-			<img
-				src='https://github.com/viniciuscchagas.png'
-				alt='Vinicius Chagas'
-			/>
+			<img src='https://github.com/viniciuscchagas.png' alt='Vinicius Chagas' />
 			<div>
 				<strong>Vinicus Chagas</strong>
 				<p>
 					<img src='icons/level.svg' alt='Level' />
-					Level {level}
+					Level {level > -1 ? level : '...'}
 				</p>
 			</div>
 		</div>
