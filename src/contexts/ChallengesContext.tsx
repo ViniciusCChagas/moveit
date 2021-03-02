@@ -55,7 +55,7 @@ export function ChallengesProvider({ children, MIUserId }: ChallengesProviderPro
 	const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
 	useEffect(() => {
-		axios.get('http://localhost:3000/api/user', { params: { userId: MIUserId } }).then(({ data }) => {
+		axios.get('/api/user', { params: { userId: MIUserId } }).then(({ data }) => {
 			setLevel(data.level);
 			setExperience(data.experience ?? 0);
 			setCurrentExperience(data.currentExperience);

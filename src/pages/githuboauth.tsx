@@ -7,10 +7,11 @@ import { useEffect } from 'react';
 
 import Cookies from 'js-cookie';
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 export default function GithubOAuth({ oAuthCode }) {
-    const router = useRouter();
-    
+	const router = useRouter();
+
 	useEffect(() => {
 		handleOAuth();
 	}, []);
@@ -29,6 +30,9 @@ export default function GithubOAuth({ oAuthCode }) {
 
 	return (
 		<div className={styles.pageContainer}>
+			<Head>
+				<title>Github OAuth | move.it</title>
+			</Head>
 			<img src='/background.svg' alt='background moveit' />
 			<div className={styles.leftContainer}>
 				<img src='/logo-full-white.svg' alt='Logo moveit' />

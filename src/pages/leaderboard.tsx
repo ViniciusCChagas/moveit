@@ -6,6 +6,7 @@ import { AppContext } from '../contexts/AppContext';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
+import Head from 'next/head';
 
 export default function Leaderboard() {
 	const [leaderboard, setLaderboard] = useState([]);
@@ -22,6 +23,9 @@ export default function Leaderboard() {
 
 	return (
 		<div className={styles.pageContainer}>
+			<Head>
+				<title>Leaderboard | move.it</title>
+			</Head>
 			<NavBar />
 			<div className={styles.appContainer}>
 				<header>

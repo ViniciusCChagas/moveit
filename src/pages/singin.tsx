@@ -7,6 +7,7 @@ import { faGithub, faGithubAlt } from '@fortawesome/free-brands-svg-icons';
 import { GetServerSideProps } from 'next';
 
 import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 interface SingInProps {
 	MIUserId: string;
@@ -15,6 +16,9 @@ interface SingInProps {
 export default function SingIn(props: SingInProps) {
 	return (
 		<div className={styles.pageContainer}>
+			<Head>
+				<title>SingIn | move.it</title>
+			</Head>
 			<img src='/background.svg' alt='background moveit' />
 			<div className={styles.loginContainer}>
 				<img src='/logo-full-white.svg' alt='Logo moveit' />
